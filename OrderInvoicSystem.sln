@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36301.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInvoicSystem", "OrderInvoicSystem\OrderInvoicSystem.csproj", "{B2F94DA7-6B49-41F5-A5E4-E760BA60C506}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInvoiceSystem", "OrderInvoicSystem\OrderInvoiceSystem.csproj", "{B2F94DA7-6B49-41F5-A5E4-E760BA60C506}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
