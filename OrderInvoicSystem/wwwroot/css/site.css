@@ -1,22 +1,59 @@
-html {
-  font-size: 14px;
+/* Custom Navbar Gradient and Styling */
+.custom-navbar {
+    background: linear-gradient(90deg, #0d6efd 0%, #6c63ff 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: #ffd700 !important;
+            text-decoration: underline;
+        }
+
+/* Main Content Styling */
+.custom-main {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 2rem;
+    margin-top: 2rem;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* Footer Gradient and Styling */
+.custom-footer {
+    background: linear-gradient(90deg, #6c63ff 0%, #0d6efd 100%);
+    color: #fff;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .custom-footer a {
+        color: #ffd700;
+        text-decoration: underline;
+    }
+
+/* Accent color for buttons and links */
+.btn-primary, .nav-link.active {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
 }
 
-body {
-  margin-bottom: 60px;
+    .btn-primary:hover, .nav-link.active:hover {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .custom-main {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
 }
