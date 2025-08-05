@@ -1,0 +1,22 @@
+# Use official .NET runtime and SDK images
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+
+# Copy the csproj and restore
+COPY ["OrderInvoicSystem/OrderInvoicSystem.csproj", "OrderInvoicSystem/"]
+RUN dotnet restore "OrderInvoicSystem/OrderInvoicSystem.csproj"
+
+# Copy the full project and build
+COPY . .
+WORKDIR "/src/OrderInvoicSystem"
+RUN dotnet publish -c Release -o /app/publish
+
+# Final image
+FROM base AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "OrderInvoicSystem.dll"]
